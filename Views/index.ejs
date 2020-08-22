@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/Stylesheets/index.css">
+
+<h1>Index Page</h1>
+
+<form action="/user/new" method="get">
+  <button type="submit" class="info">Add a New Student</button>
+</form>
+
+<h2>Enter the Name or Roll No to search :</h2>
+<input type="text" id="searchBar" placeholder="Enter text to search">
+
+<h3>Result : </h3>
+<table>
+
+</table>
+<p><i>Click on the name for more info</i></p>
+
+<script src="/Scripts/index.js" type="module"></script>
+
+<%- include("partials/footer") %>

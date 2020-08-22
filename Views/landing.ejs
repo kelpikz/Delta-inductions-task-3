@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/Stylesheets/landing.css">
+
+<h1>Welcome to the Portal</h1>
+
+<p> Select an option</p>
+<form action="/user" method="get" class="one">
+  <button type="submit" class="opt1">SEARCH FOR EXISTING USER</button>
+</form>
+
+<form action="/user/new" method="get" class="two">
+  <button type="submit" class="opt2">CREATE A NEW USER</button>
+</form>
+
+<p><i>P.S Run the seed.js file to add some dummy data</i></p>
+
+<%- include("partials/footer") %>

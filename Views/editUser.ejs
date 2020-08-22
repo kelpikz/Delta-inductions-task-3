@@ -1,0 +1,53 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/Stylesheets/newUser.css
+">
+
+<h1>Update User</h1>
+
+<form action="./" method="get">
+  <button type="submit" class="info">Cancel</button>
+</form>
+<form class="form" action="/user/<%= student.rollno %>?_method=PUT" method="post">
+  <div class="formDiv">
+    <label for="rollno"><span class="formLabel">Roll No:</span>
+      <input type="number" name="rollno" minlength="9" maxlength="9" placeholder="Enter Your Roll No"
+        value="<%- Number(student.rollno) %>" required>
+    </label>
+  </div>
+  <div class="formDiv">
+    <label for="name"><span class="formLabel">Name:</span>
+      <input type="text" name="name" placeholder="Enter Your Roll No" required value="<%=student.name%>">
+    </label>
+  </div>
+  <div class="formDiv">
+    <div>
+      <label for="dept"><span class="formLabel">Dept:</span>
+        <select name="dept" id="myDept" required>
+          <option value="" selected disabled>Dept</option>
+          <option value="cse">CSE</option>
+          <option value="mme">MME</option>
+          <option value="me">ME</option>
+          <option value="chem">CHEM</option>
+          <option value="civil">CIVIL</option>
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+          <option value="ice">ICE</option>
+          <option value="prod">PROD</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <% if (typeof(wrongPassword)!== "undefined") { %>
+  <p style="color: red;"> The password was incorrect </p>
+  <% } else { %>
+  <p style="color: red;">Enter the password to update</p>
+  <% } %>
+  <div class="formDiv">
+    <label for="password"><span class="formLabel">Password :</span>
+      <input type="password" name="password" placeholder="password" required>
+    </label>
+  </div>
+  <button type="submit">Update</button>
+</form>
+
+<%- include("partials/footer") %>

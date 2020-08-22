@@ -1,0 +1,38 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/Stylesheets/newUser.css">
+
+<h1>SHOW USER PAGE </h1>
+
+<form action="./" method="get">
+  <button type="submit" class="info">BACK TO INDEX</button>
+</form>
+<div class="userData">
+  <div class="formDiv">
+    <span class="formLabel"><strong>Name : </strong></span> <%= student.name %>
+  </div>
+  <div class="formDiv">
+    <span class="formLabel"><strong>Department : </strong></span> <%- student.dept || "-NIL-" %>
+  </div>
+  <div class="formDiv">
+    <span class="formLabel"><strong>Roll Number : </strong></span> <%= student.rollno %>
+  </div>
+
+  <form action="./<%= student.rollno %>/edit" method="get">
+    <button type="submit" class="info">Edit</button>
+  </form>
+  <form action="/user/<%= student.rollno %>?_method=DELETE" method="post" id="deleteItem">
+    <div class="formDiv" hidden>
+      <h4>Enter the password to delete the student</h4>
+      <label for="password"><span class="formLabel">Password :</span>
+        <input type="password" name="password" placeholder="Enter password to delete" required>
+      </label>
+    </div>
+    <button type="button" class="delete" onclick="showAction()">Delete</button>
+  </form>
+  <% if (typeof(wrongPassword)!== "undefined") { %>
+  <p style="color: red;"> The password was incorrect </p>
+  <% } %>
+
+</div>
+<script src="/Scripts/showUser.js"></script>
+<%- include("partials/footer") %>

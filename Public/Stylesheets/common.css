@@ -1,0 +1,15 @@
+body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.delete {
+  background-color: #ff2020;
+  color: white;
+}
+
+.info {
+  background-color: rgb(82, 82, 252);
+  color: white;
+}

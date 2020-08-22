@@ -1,0 +1,43 @@
+.form,
+.userData {
+  margin-top: 15px;
+  min-width: 350px;
+  width: fit-content;
+  padding: 20px;
+  border: solid 0.5px #888;
+  box-shadow: 5px 5px 8px 1px #ddd;
+}
+
+.formDiv {
+  padding: 10px;
+}
+
+.formLabel {
+  display: inline-block;
+  width: 100px;
+}
+
+button,
+.button {
+  display: inline-block;
+  background-color: white;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border: solid 1px #444;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+h4 {
+  margin: 0px 0px 20px 0px;
+}
+
+@media only screen and (max-width : 650px) {
+
+  .form,
+  .userData {
+    min-width: 220px;
+  }
+}

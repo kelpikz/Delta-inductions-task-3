@@ -1,0 +1,21 @@
+button {
+  width: fit-content;
+  margin: 20px;
+  padding: 20px;
+  margin: solid 0.3px #777777;
+  border-radius: 10px;
+}
+
+.opt1 {
+  color: aliceblue;
+  background-color: royalblue;
+}
+
+.opt2 {
+  color: azure;
+  background-color: magenta;
+}
+
+p>i {
+  font-size: x-small;
+}
